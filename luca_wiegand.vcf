@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Wiegand;Luca;;;
+FN:Luca Wiegand
+ORG:Wega Studios
+TITLE:Software Developer
+TEL;TYPE=CELL,VOICE:+4915758069457
+EMAIL;TYPE=WORK,INTERNET:wegastudios@outlook.de
+URL:http://luca-wiegand.com/
+END:VCARD
