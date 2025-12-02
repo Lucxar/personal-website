@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca Wiegand | Kontakt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', 
+                        dark: '#0f172a',    
+                        card: '#1e293b',    
+                        text: '#f8fafc',    
+                        muted: '#94a3b8'   
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-text font-sans antialiased min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-md bg-card border border-white/10 rounded-2xl shadow-2xl overflow-hidden fade-in relative">
+        
+        <div class="h-24 bg-gradient-to-r from-blue-900 to-slate-800"></div>
+
+        <div class="px-6 pb-8 text-center relative">
+            
+            <div class="w-32 h-32 mx-auto -mt-16 bg-dark rounded-full p-2 border-4 border-card">
+                <div class="w-full h-full bg-slate-700 rounded-full flex items-center justify-center overflow-hidden">
+                    <i class="fas fa-user text-4xl text-muted"></i>
+                    </div>
+            </div>
+
+            <h1 class="text-2xl font-bold mt-4">Luca Wiegand</h1>
+            <p class="text-primary font-medium text-sm tracking-wider uppercase mb-1">Software Developer</p>
+            <p class="text-muted text-sm">Wega Studios</p>
+
+            <div class="w-16 h-1 bg-white/10 mx-auto my-6 rounded-full"></div>
+
+            <div class="flex flex-col gap-3">
+                
+                <a href="luca_wiegand.vcf" download="Luca_Wiegand_Kontakt.vcf" class="w-full bg-[#047857] hover:bg-[#036045] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg active:scale-95">
+                    <i class="fas fa-address-card text-xl"></i>
+                    <span>Kontakt speichern</span>
+                </a>
+
+                <a href="../index.html" class="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all border border-white/5">
+                    <i class="fas fa-globe text-xl"></i>
+                    <span>Webseite öffnen</span>
+                </a>
+
+                <a href="https://linkedin.com/in/luca-wiegand-385359279/" target="_blank" class="w-full bg-[#0077b5] hover:bg-[#006097] text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all">
+                    <i class="fab fa-linkedin text-xl"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/Lucxar" target="_blank" class="w-full bg-slate-800 hover:bg-black text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition-all border border-white/10">
+                    <i class="fab fa-github text-xl"></i>
+                    <span>GitHub</span>
+                </a>
+
+            </div>
+
+            <div class="mt-8 text-xs text-muted">
+                <a href="../index.html" class="hover:text-primary transition-colors">
+                    &copy; 2025 Wega Studios
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</body>
+</html>
