@@ -34,7 +34,7 @@ export default function Navbar() {
             className="flex-shrink-0 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 px-4 py-1.5 rounded-lg transition-all"
             onClick={() => { navigate('/'); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
           >
-            <span className="text-xl font-bold tracking-wider">WEGA STUDIOS</span>
+            <span className="text-xl font-bold tracking-wider">LUCA WIEGAND</span>
           </button>
 
           {/* Desktop */}
