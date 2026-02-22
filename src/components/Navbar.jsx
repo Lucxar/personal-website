@@ -21,7 +21,6 @@ export default function Navbar() {
   }
 
   const links = [
-    { label: 'Über mich', id: 'about' },
     { label: 'Skills', id: 'skills' },
     { label: 'Erfahrung', id: 'experience' },
     { label: 'Projekte', id: 'projects' },
@@ -45,7 +44,7 @@ export default function Navbar() {
                 {l.label}
               </button>
             ))}
-            <button onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+            <button onClick={() => { navigate('/kontakt'); setMenuOpen(false) }} className="bg-primary hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">
               Kontakt
             </button>
           </div>
@@ -69,7 +68,7 @@ export default function Navbar() {
               {l.label}
             </button>
           ))}
-          <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-primary px-3 py-3 text-sm font-medium">
+          <button onClick={() => { navigate('/kontakt'); setMenuOpen(false) }} className="block w-full text-left text-primary px-3 py-3 text-sm font-medium">
             Kontakt
           </button>
         </div>

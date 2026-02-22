@@ -8,6 +8,7 @@ import DetailWega from './pages/DetailWega'
 import DetailSentrix from './pages/DetailSentrix'
 import DetailTerrafix from './pages/DetailTerrafix'
 import DetailInternship from './pages/DetailInternship'
+import DetailKontakt from './pages/DetailKontakt'
 import Visitenkarte from './pages/Visitenkarte'
 
 function ScrollToTop() {
@@ -34,6 +35,7 @@ function AppContent() {
         <Route path="/detail/sentrix" element={<DetailSentrix />} />
         <Route path="/detail/terrafix" element={<DetailTerrafix />} />
         <Route path="/detail/internship" element={<DetailInternship />} />
+        <Route path="/kontakt" element={<DetailKontakt />} />
         <Route path="/visitenkarte" element={<Visitenkarte />} />
       </Routes>
     </>

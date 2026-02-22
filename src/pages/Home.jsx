@@ -7,7 +7,6 @@ import EmbeddedSystemsTile from '../components/tiles/EmbeddedSystemsTile'
 import ExperienceTile from '../components/tiles/ExperienceTile'
 import InterdisciplinaryTile from '../components/tiles/InterdisciplinaryTile'
 import ProjectTile from '../components/tiles/ProjectTile'
-import ContactTile from '../components/tiles/ContactTile'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -43,7 +42,7 @@ export default function Home() {
               <button onClick={() => scrollTo('projects')} className="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all text-center">
                 Projekte ansehen
               </button>
-              <button onClick={() => scrollTo('contact')} className="border border-white/20 hover:bg-white/5 px-6 py-3 rounded-lg font-medium transition-all text-center">
+              <button onClick={() => navigate('/kontakt')} className="border border-white/20 hover:bg-white/5 px-6 py-3 rounded-lg font-medium transition-all text-center">
                 Kontaktieren
               </button>
             </div>
@@ -172,12 +171,27 @@ export default function Home() {
 
       {/* ===== Contact Section ===== */}
       <div className="flex justify-center mt-20 mb-10">
-        <div className="w-72 h-1 bg-primary rounded-full"></div>
+        <div className="w-2/3 h-1 bg-primary rounded-full"></div>
       </div>
-      <div id="contact" className="flex justify-center px-4 sm:px-6 lg:px-8">
-        <BentoCard delay={0}>
-          <ContactTile />
-        </BentoCard>
+      <div id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap justify-center gap-4">
+          <a href="https://github.com/Lucxar" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 hover:bg-white/10 px-6 py-3 rounded-lg border border-white/10 transition-all text-sm">
+            <i className="fab fa-github text-lg"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://codeforces.com/profile/lucxar" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 px-6 py-3 rounded-lg border border-red-500/20 transition-all text-sm text-red-400">
+            <i className="fas fa-code text-lg"></i>
+            <span>Codeforces</span>
+          </a>
+          <a href="https://linkedin.com/in/luca-wiegand-385359279/" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-[#0077b5]/20 hover:bg-[#0077b5]/30 px-6 py-3 rounded-lg border border-[#0077b5]/30 transition-all text-sm text-[#5cb8e6]">
+            <i className="fab fa-linkedin text-lg"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="/luca_wiegand_public.vcf" download="Luca_Wiegand_Kontakt.vcf" className="flex items-center gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 px-6 py-3 rounded-lg border border-emerald-500/20 transition-all text-sm text-emerald-400">
+            <i className="fas fa-address-card text-lg"></i>
+            <span>Kontakt speichern</span>
+          </a>
+        </div>
       </div>
 
       {/* ===== Footer ===== */}

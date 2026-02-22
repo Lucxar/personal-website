@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import BackButton from '../components/BackButton'
 
 export default function DetailWega() {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen pt-24 px-4 pb-20">
       <div className="max-w-4xl mx-auto fade-in">
@@ -15,9 +17,16 @@ export default function DetailWega() {
             <p className="text-muted leading-relaxed mb-6">
               Ob kleinere Aufträge wie Webseiten und Tools oder größere Softwareprojekte mit Backend, Datenbank und Schnittstellen — ich arbeite mich in jedes Thema ein und liefere saubere, durchdachte Ergebnisse. Der direkte Draht zu mir als Ansprechpartner sorgt dabei für kurze Wege und unkomplizierte Zusammenarbeit.
             </p>
-            <p className="text-muted leading-relaxed">
+            <p className="text-muted leading-relaxed mb-8">
               Sie haben ein Projekt im Kopf oder brauchen Unterstützung bei der Entwicklung? Ich freue mich über eine Anfrage — gemeinsam finden wir die passende Lösung.
             </p>
+            <button
+              onClick={() => navigate('/kontakt')}
+              className="inline-flex items-center gap-3 bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg"
+            >
+              <i className="fas fa-envelope text-lg"></i>
+              <span>Kontakt aufnehmen</span>
+            </button>
           </div>
         </div>
       </div>
