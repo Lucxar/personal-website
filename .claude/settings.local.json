@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version 2>/dev/null && npm --version 2>/dev/null)",
+      "Bash(cd:*)",
+      "Bash(cd /c/Dev/personal-website && npm run build 2>&1)",
+      "Bash(cd /c/Dev/personal-website && npx vite --host 2>&1)"
+    ]
+  }
+}

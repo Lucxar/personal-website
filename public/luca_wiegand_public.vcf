@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Wiegand;Luca;;;
+FN:Luca Wiegand
+ORG:Wega Studios
+TITLE:Software Developer
+EMAIL;TYPE=WORK,INTERNET:wegastudios@outlook.de
+URL:http://luca-wiegand.com/
+END:VCARD
