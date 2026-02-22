@@ -1,217 +1,165 @@
 # Inhalte.md
 
----
-
-## Seitenstruktur / Sektionen
-
-- [ ] Seitentitel: „Luca Wiegand | Software Developer"
-- [ ] Branding / Logo-Text: „WEGA STUDIOS"
-- [ ] Navigation: Über mich, Skills, Erfahrung, Projekte, Kontakt
-- [ ] Hauptseite (`index.html`): Single-Page-Application mit Detail-Overlays
-- [ ] Visitenkarte (`visitenkarte/index.html`): Standalone-Kontaktseite
-- [ ] Domain: luca-wiegand.com (via CNAME)
-- [ ] Sprache: Deutsch (`lang="de"`)
-- [ ] Copyright-Zeile: „© 2025 Luca Wiegand / Wega Studios. Alle Rechte vorbehalten."
+Alle Textinhalte und Daten der Webseite, strukturiert nach Seitenaufbau.
 
 ---
 
-## Hero / Intro
+## Seitenstruktur / Navigation
 
-- [ ] Überschrift-Tag: „Software Developer"
-- [ ] Name: „Luca Wiegand"
-- [ ] Claim: „Leidenschaft für Problemlösung und Softwareentwicklung."
-- [ ] Subline: „Ich entwickle skalierbare Systeme und immersive Erlebnisse."
-- [ ] CTA primär: „Projekte ansehen"
-- [ ] CTA sekundär: „Kontaktieren"
-- [ ] Profilbild: `profilbild1zu1.png` (Quadrat-Format)
-
----
-
-## Über mich / Motivation
-
-- [ ] Absatz 1: „Probleme zu lösen ist meine Antriebskraft. Mich fasziniert der Prozess, aus einer abstrakten Idee durch Code etwas Reales zu erschaffen, das funktioniert und Mehrwert bietet. Ob komplexe Backend-Architekturen oder interaktive Spielwelten – ich liebe es, Dinge selbst zu entwickeln."
-- [ ] Absatz 2: „Mein Ziel ist es, mein Wissen stetig zu erweitern, neue Skills zu meistern und technologische Herausforderungen anzunehmen. Langfristig strebe ich danach, Verantwortung zu übernehmen und mich in Richtung Führungspositionen zu entwickeln, um Teams und Projekte zum Erfolg zu führen."
+- Seitentitel: „Luca Wiegand | Software Developer"
+- Header-Button: „LUCA WIEGAND" → Link zur Homepage (Scroll nach oben)
+- Navigation: Skills, Erfahrung, Projekte, Kontakt (→ Detailseite)
+- Domain: luca-wiegand.com (via CNAME)
+- Sprache: Deutsch (`lang="de"`)
+- Copyright: „© 2025 Luca Wiegand / Wega Studios. Alle Rechte vorbehalten."
+- Deployment: GitHub Actions → GitHub Pages
 
 ---
 
-## Skills & Tech-Stack
+## Hero (oben, ohne Kachel)
+
+- Profilbild: `profilbild1zu1.png` (Quadrat, links)
+- Überschrift-Tag: „Software Developer"
+- Name: „Luca Wiegand"
+- Absatz 1: „Ich mag es, Probleme zu verstehen und durch Code zu lösen — ob Backend-Systeme, Webanwendungen oder Spieleentwicklung. Am meisten reizt mich dabei, Ideen von Grund auf umzusetzen und dabei sauber und durchdacht zu arbeiten."
+- Absatz 2: „Ich will mich fachlich weiterentwickeln, neue Technologien lernen und langfristig mehr Verantwortung in Projekten und Teams übernehmen."
+- CTA primär: „Projekte ansehen" → Scroll zu Projekte
+- CTA sekundär: „Kontaktieren" → Kontakt-Detailseite (`/kontakt`)
+
+---
+
+## Technische Expertise (Bento Grid Kacheln)
 
 ### Java Ecosystem
-
-- [ ] Java (Expertise)
-- [ ] Spring Boot & Modulith
-- [ ] Architekturpattern
-- [ ] Thymeleaf
+- Java (Expertise)
+- Spring Boot & Modulith
+- Architekturpattern
+- Thymeleaf
 
 ### Web & Fullstack
-
-- [ ] NestJS (Node.js)
-- [ ] HTML5 & CSS3
-- [ ] REST APIs
+- NestJS (Node.js)
+- HTML5
+- CSS3
+- REST APIs
 
 ### Data & Ops
+- Docker
+- PostgreSQL & MySQL
+- Git / Version Control
 
-- [ ] Docker
-- [ ] PostgreSQL & MySQL
-- [ ] Git / Version Control
+### Low-Level
+- C++ & C
+- Algorithmen & Datenstrukturen
+- Performanzoptimierung
 
-### Low-Level & Game Dev
+### Game Development (Kachel mit Beschreibung)
+- Text: „In meiner Freizeit entwickle ich Spiele mit der Unreal Engine — von Gameplay-Logik bis hin zu kompletten Prototypen. Spieleentwicklung ist für mich kreatives Ventil und technische Herausforderung zugleich."
+- Tags: Unreal Engine, C++, Blueprints
 
-- [ ] Beschreibung: „Erfahrung in C und C++ sowie Spieleentwicklung mit der Unreal Engine."
-- [ ] C++
-- [ ] C
-- [ ] Unreal Engine
-
-### Embedded Systems & Hardware
-
-- [ ] Beschreibung: „Praktische Erfahrung mit hardwarenaher Entwicklung durch universitäre Projekte – vom Mikrocontroller bis zum FPGA."
-- [ ] Arduino
-- [ ] ESP32
-- [ ] STM32
-- [ ] 65C02
-- [ ] FPGAs
-- [ ] Assembly
-- [ ] Basic
-
-### Sektions-Meta
-
-- [ ] Sektions-Überschrift: „Technische Expertise"
-- [ ] Sektions-Subline: „Mein aktueller Tech-Stack und Werkzeuge."
+### Embedded Systems & Hardware (Kachel mit Beschreibung)
+- Text: „Starkes, tiefgreifendes technisches Fundament — keine Berührungsängste mit hardwarenaher Architektur. Praktische Erfahrung durch universitäre Projekte, vom Mikrocontroller bis zum FPGA."
+- Tags: Arduino, ESP32, STM32, 65C02, FPGAs, Assembly, C, Basic
 
 ---
 
-## Embedded Systems & Low-Level Programming
+## Berufserfahrung & Unternehmen (Bento Grid Kacheln)
 
-- [ ] Kernaussage: „Starkes, tiefgreifendes technisches Fundament durch praktische universitäre Projekte – von Mikrocontrollern über FPGAs bis hin zu Assembler-Programmierung."
-- [ ] Differenzierung: Keine Berührungsängste mit hardwarenaher Architektur und „Nerd-Themen". Dieses Skillset hebt sich deutlich vom reinen High-Level-Entwickler ab.
-- [ ] Hardware-Erfahrung: Arduino, ESP32, STM32, 65C02, FPGAs
-- [ ] Sprachen: Assembly, C, Basic
-- [ ] Kontext: Praktische Erfahrung durch universitäre Projekte (HHU Düsseldorf)
+### LikeTik / Axinity GmbH
+- Label: „STARTUP"
+- Rolle: „Backend Developer"
+- Kurzbeschreibung: „Aktive Mitentwicklung einer skalierbaren E-Commerce-Plattform von der allerersten Zeile Code an."
+- **Detailseite** (`/detail/liketik`):
+  - Unternehmen: Axinity GmbH
+  - Einleitung: „Bei LikeTik (Axinity GmbH) bin ich als Backend-Developer seit der Gründungsphase maßgeblich am Aufbau der Plattform beteiligt – from scratch, seit der allerersten Zeile Code."
+  - Aufgaben: Backend-Architektur, REST-APIs, Datenbank-Integration, Plattform-Infrastruktur von Grund auf
+  - Link: https://liketik.com
 
----
+### Wega Studios
+- Label: „FOUNDER"
+- Rolle: „Inhaber & Entwickler"
+- Kurzbeschreibung: „Mein eigenes Gewerbe für Software-Dienstleistungen und individuelle Entwicklungsprojekte."
+- **Detailseite** (`/detail/wega`):
+  - Absatz 1: „Wega Studios ist mein eigenes Unternehmen, unter dem ich als selbstständiger Softwareentwickler tätig bin. Ich unterstütze Unternehmen und Privatpersonen bei der Umsetzung ihrer digitalen Projekte — von der ersten Idee bis zur fertigen Lösung."
+  - Absatz 2: „Ob kleinere Aufträge wie Webseiten und Tools oder größere Softwareprojekte mit Backend, Datenbank und Schnittstellen — ich arbeite mich in jedes Thema ein und liefere saubere, durchdachte Ergebnisse. Der direkte Draht zu mir als Ansprechpartner sorgt dabei für kurze Wege und unkomplizierte Zusammenarbeit."
+  - Absatz 3: „Sie haben ein Projekt im Kopf oder brauchen Unterstützung bei der Entwicklung? Ich freue mich über eine Anfrage — gemeinsam finden wir die passende Lösung."
+  - Button: „Kontakt aufnehmen" → Kontakt-Detailseite
 
-## Spieleentwicklung (Hobby & Erfolge)
+### Bildung (Kachel)
+- Heinrich-Heine-Universität Düsseldorf
+- B.Sc. Informatik
+- Aktuell im Studium.
 
-- [ ] Kernaussage: „Spieleentwicklung als kreatives Ventil und technische Herausforderung – von Visual Scripting bis C++ in der Unreal Engine."
-- [ ] Tech-Stack: Unreal Engine (Visual Scripting via Nodes/Blueprints sowie C++)
-- [ ] Auszeichnung: Gewinner des HHU Game Jam 2025 (im 3er-Team, siehe Terrafix)
-- [ ] Foto Preisverleihung: ![Platzhalter: Siegerehrung HHU Game Jam 2025 mit Team und wiss. Mitarbeiter](pfad/zum/bild.jpg)
-
----
-
-## Berufserfahrung / Unternehmen
-
-### LikeTik / Axinity GmbH (Startup / E-Commerce)
-
-- [ ] Unternehmen: Axinity GmbH
-- [ ] Projekt: „LikeTik" – Skalierbare E-Commerce-Plattform
-- [ ] Rolle: „Backend Developer"
-- [ ] Label: „STARTUP"
-- [ ] Kurzbeschreibung (Karte): „Aktive Mitentwicklung einer skalierbaren E-Commerce-Plattform von der allerersten Zeile Code an."
-- [ ] Detail-Einleitung: „Bei LikeTik (Axinity GmbH) bin ich als Backend-Developer seit der Gründungsphase maßgeblich am Aufbau der Plattform beteiligt – from scratch, seit der allerersten Zeile Code."
-- [ ] Aufgabe 1: „Konzeption und Implementierung der Backend-Architektur."
-- [ ] Aufgabe 2: „Entwicklung von REST-APIs für die Mobile- und Web-Clients."
-- [ ] Aufgabe 3: „Integration von Datenbanken und Sicherstellung der Datenintegrität."
-- [ ] Aufgabe 4: „Aufbau der gesamten Plattform-Infrastruktur von Grund auf."
-- [ ] Link: https://liketik.com (Label: „Zur Webseite von LikeTik")
-
-### Wega Studios (Founder)
-
-- [ ] Rolle: „Inhaber & Entwickler" (Karte) / „Inhaber & Gründer" (Detail)
-- [ ] Label: „FOUNDER"
-- [ ] Kurzbeschreibung (Karte): „Mein eigenes Gewerbe für Software-Dienstleistungen und individuelle Entwicklungsprojekte."
-- [ ] Detail-Text: „Unter dem Namen Wega Studios biete ich professionelle Softwareentwicklungs-Dienstleistungen an. Der Fokus liegt auf individuellen Lösungen, sauberem Code und modernen Technologien."
-- [ ] Platzhalter-Hinweis: „Weitere Projektdetails folgen in Kürze."
-
-### Sentrix Code (Co-Founder)
-
-- [ ] Rolle: „Mitgründer"
-- [ ] Label: „CO-FOUNDER"
-- [ ] Kurzbeschreibung (Karte): „Softwareentwicklungs-Firma. Bereitstellung professioneller IT-Lösungen im Team."
-- [ ] Detail-Text: „Als Mitgründer von Sentrix Code arbeite ich mit einem Team daran, umfassende Softwarelösungen bereitzustellen."
-- [ ] Platzhalter-Hinweis: „Webseite folgt"
-
-### Sektions-Meta
-
-- [ ] Sektions-Überschrift: „Berufserfahrung & Unternehmen"
+### Interdisziplinäre Erfahrung (Kachel)
+- 2 Monate USA — sehr gutes Business English
+- 6 Monate Logistik — Prozessoptimierung & Beratung
+- „Übersetzer" zwischen IT und Fachbereich — Requirements Engineering
 
 ---
 
-## Interdisziplinäre Erfahrung (Logistik, IT & Internationales)
-
-- [ ] Kernaussage: „Breite Praxiserfahrung über die reine Softwareentwicklung hinaus – mit internationaler Perspektive und Schnittstellenkompetenz."
-- [ ] Auslandsaufenthalt: 2 Monate in den USA (sehr gutes Business English)
-- [ ] Logistik-Erfahrung: Insgesamt 6 Monate im Bereich Logistik (Prozessoptimierung & Beratung)
-- [ ] Schnittstellenrolle: Funktion als „Übersetzer" zwischen dem Logistik-Fachbereich und der IT-Entwicklung bei der Konzeption einer Applikation
-- [ ] Kompetenz-Fokus: Requirements Engineering und interdisziplinäre Kommunikation
-- [ ] Hinweis: Exakte App-Details high-level/allgemein halten; Fokus auf die Brückenfunktion zwischen Fachbereich und Technik
-
----
-
-## Projekte & Game Jams
+## Projekte (Bento Grid Kacheln)
 
 ### Terrafix (HHU Game Jam 2025)
+- Badge: „GEWINNER"
+- Kurzbeschreibung: „Ein Spiel entwickelt mit der Unreal Engine in einem 3-köpfigen Team."
+- **Detailseite** (`/detail/terrafix`):
+  - Badge: „1. PLATZ HHU GAME JAM 2025"
+  - Untertitel: „Unreal Engine Project"
+  - Siegerfoto: `SiegerfotoGameJam2025.jpeg` (mit Zoom-Hover-Effekt)
+  - Text 1: „Terrafix entstand im Rahmen des HHU Game Jam 2025 — innerhalb von nur 48 Stunden entwickelten wir als 3-köpfiges Team ein vollständiges Spiel mit der Unreal Engine. Die Idee: Ein Reverse-Factorio, in dem man die Welt nicht ausbeutet, sondern rettet. Der Spieler steuert einen Roboter, der eine verwüstete Erde Stück für Stück wieder belebt — Böden rekultivieren, Vegetation zurückbringen und Ökosysteme wiederherstellen."
+  - Text 2: „Das Konzept hat die Jury überzeugt: Am Ende konnten wir uns gegen alle anderen Teams durchsetzen und den ersten Platz erringen. Eine intensive Erfahrung, die gezeigt hat, wie viel in kürzester Zeit entstehen kann, wenn Teamwork, Kreativität und technisches Know-how zusammenkommen."
+  - Tech Stack: Unreal Engine 5, Blueprints & C++, Git Collaboration
+  - Spiel-Link: https://maystudios.itch.io/terrafix (Button: „Hier geht's zum Spiel")
 
-- [ ] Auszeichnung: „GEWINNER" / „1. PLATZ HHU GAME JAM 2025"
-- [ ] Kurzbeschreibung (Karte): „Ein Spiel entwickelt mit der Unreal Engine in einem 3-köpfigen Team. Wir haben damit den ersten Platz belegt."
-- [ ] Detail-Einleitung: „Terrafix ist ein Spiel, das ich zusammen mit zwei weiteren Kommilitonen für den Game Jam der Heinrich-Heine-Universität entwickelt habe."
-- [ ] Tech Stack: Unreal Engine 5, Visual Scripting (Nodes/Blueprints) & C++, Git Collaboration
-- [ ] Rolle: „Gameplay Programmierung und Logik-Implementierung."
-- [ ] Code-Beispiel (C++ Placeholder): `void ATerrafixCharacter::Interact() { if (CurrentInteractable) { CurrentInteractable->ExecuteAction(this); } }`
-- [ ] Untertitel (Detail): „Unreal Engine Project"
-- [ ] Foto Preisverleihung: ![Platzhalter: Siegerehrung HHU Game Jam 2025 mit Team und wiss. Mitarbeiter](pfad/zum/bild.jpg)
-
-### Programmier-Praktikum (Universitätsprojekt)
-
-- [ ] Label: „UNIVERSITÄTSPROJEKT"
-- [ ] Kurzbeschreibung (Karte): „Ein umfangreiches Softwareprojekt im Rahmen des Studiums."
-- [ ] Detail-Untertitel: „HHU Universitätsprojekt"
-- [ ] Detail-Text: „Platzhalter-Text für das Programmier-Praktikum. Hier folgt eine detaillierte Beschreibung des Projekts, der Aufgabenstellung und der verwendeten Technologien."
-- [ ] Platzhalter: „Screenshot / Code Platzhalter"
-
-### Sektions-Meta
-
-- [ ] Sektions-Überschrift: „Projekte & Game Jams"
-- [ ] Sektions-Subline: „Ausgewählte Arbeiten aus Praxis und Studium."
-
----
-
-## Bildung / Werdegang
-
-- [ ] Institution: „Heinrich-Heine-Universität Düsseldorf"
-- [ ] Abschluss: „Bachelor of Science in Informatik"
-- [ ] Status: „Aktuell im Studium."
+### Programmier-Praktikum
+- Label: „UNIVERSITÄTSPROJEKT"
+- Kurzbeschreibung: „Ein umfangreiches Softwareprojekt im Rahmen des Studiums."
+- **Detailseite** (`/detail/internship`):
+  - Untertitel: „HHU Universitätsprojekt"
+  - Text 1: „Im Rahmen eines Universitätsprojekts an der Heinrich-Heine-Universität habe ich ein Matching- und Organisationssystem entwickelt, das den gesamten Prozess rund um wissenschaftliche Abschlussarbeiten vereinfacht."
+  - Text 2: „Die Plattform ermöglicht es Studierenden, passende Professoren und wissenschaftliche Mitarbeiter für ihre Abschlussarbeit zu finden, Themen abzustimmen, Dokumente auszutauschen, Termine zu koordinieren und direkt zu kommunizieren — alles an einem Ort. Das Ziel: Den oft unübersichtlichen Weg von der Themenfindung bis zur fertigen Arbeit strukturiert und effizient zu gestalten."
+  - Text 3: „Umgesetzt wurde das Projekt als vollständige Web-Anwendung mit Spring Boot im Backend und Thymeleaf für die serverseitig gerenderte, interaktive Benutzeroberfläche. Das Ergebnis ist eine nutzbare Plattform mit echtem Frontend, über die Studierende und Lehrende direkt im Browser arbeiten können."
 
 ---
 
 ## Kontakt & Profile
 
-- [ ] GitHub: https://github.com/Lucxar
-- [ ] LinkedIn: https://linkedin.com/in/luca-wiegand-385359279/
-- [ ] VCF-Download: `visitenkarte/luca_wiegand.vcf` (Label: „Kontakt speichern")
-- [ ] Sektions-Überschrift: „Kontakt & Profile"
+### Homepage (Buttons ohne Kachel, unter blauer Trennlinie)
+- GitHub: https://github.com/Lucxar
+- Codeforces: https://codeforces.com/profile/lucxar
+- LinkedIn: https://linkedin.com/in/luca-wiegand-385359279/
+- VCF-Download: `luca_wiegand_public.vcf` (Label: „Kontakt speichern")
+
+### Kontakt-Detailseite (`/kontakt`)
+- Name: Luca Wiegand
+- Unternehmen: Wega Studios
+- Rolle: Software Developer
+- E-Mail: wegastudios@outlook.de
+- Webseite: luca-wiegand.com
+- Profile: GitHub, Codeforces, LinkedIn
+- Button: „Kontakt speichern" (VCF-Download, ohne Telefonnummer)
 
 ---
 
-## Visitenkarte (Standalone-Seite)
+## Visitenkarte (`/visitenkarte`)
 
-- [ ] Seitentitel: „Luca Wiegand | Kontakt"
-- [ ] Name: „Luca Wiegand"
-- [ ] Rolle: „Software Developer"
-- [ ] Firma: „Wega Studios"
-- [ ] Aktion 1: „Kontakt speichern" (VCF-Download)
-- [ ] Aktion 2: „Webseite öffnen" (Link zur Hauptseite)
-- [ ] Aktion 3: „LinkedIn"
-- [ ] Aktion 4: „GitHub"
-- [ ] Footer: „© 2025 Wega Studios"
+- Standalone-Seite (kein Header/Navbar)
+- Profilbild: `profilbild1zu1.png`
+- Name: Luca Wiegand
+- Rolle: Software Developer
+- Firma: Wega Studios
+- Aktionen: Kontakt speichern (VCF), Webseite öffnen, LinkedIn, GitHub
+- Footer: „© 2025 Wega Studios"
 
 ---
 
-## vCard-Daten (luca_wiegand.vcf)
+## vCard-Daten
 
-- [ ] Voller Name: Luca Wiegand
-- [ ] Organisation: Wega Studios
-- [ ] Titel: Software Developer
-- [ ] Telefon: +4915758069457
-- [ ] E-Mail: wegastudios@outlook.de
-- [ ] Website: http://luca-wiegand.com/
+### Öffentlich (`luca_wiegand_public.vcf` — ohne Telefonnummer)
+- Voller Name: Luca Wiegand
+- Organisation: Wega Studios
+- Titel: Software Developer
+- E-Mail: wegastudios@outlook.de
+- Website: http://luca-wiegand.com/
+
+### Privat (`visitenkarte/luca_wiegand.vcf` — mit Telefonnummer)
+- Zusätzlich: Telefon +4915758069457
