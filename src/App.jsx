@@ -8,6 +8,7 @@ import DetailWega from './pages/DetailWega'
 import DetailSentrix from './pages/DetailSentrix'
 import DetailTerrafix from './pages/DetailTerrafix'
 import DetailInternship from './pages/DetailInternship'
+import DetailCompiler from './pages/DetailCompiler'
 import DetailKontakt from './pages/DetailKontakt'
 import Visitenkarte from './pages/Visitenkarte'
 
@@ -35,6 +36,7 @@ function AppContent() {
         <Route path="/detail/sentrix" element={<DetailSentrix />} />
         <Route path="/detail/terrafix" element={<DetailTerrafix />} />
         <Route path="/detail/internship" element={<DetailInternship />} />
+        <Route path="/detail/compiler" element={<DetailCompiler />} />
         <Route path="/kontakt" element={<DetailKontakt />} />
         <Route path="/visitenkarte" element={<Visitenkarte />} />
       </Routes>

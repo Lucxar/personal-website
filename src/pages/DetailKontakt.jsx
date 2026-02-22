@@ -1,6 +1,40 @@
+import { useState } from 'react'
 import BackButton from '../components/BackButton'
 
+const ACCESS_KEY = 'b7e14579-c1bd-4745-a2e7-16ec17705437'
+
 export default function DetailKontakt() {
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setStatus('sending')
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          email,
+          message,
+          subject: `Neue Nachricht von ${email} — luca-wiegand.com`,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('success')
+        setEmail('')
+        setMessage('')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <div className="min-h-screen pt-24 px-4 pb-20">
       <div className="max-w-4xl mx-auto fade-in">
@@ -9,64 +43,54 @@ export default function DetailKontakt() {
           <h1 className="text-3xl sm:text-4xl font-bold mb-2">Kontakt</h1>
           <p className="text-xl text-primary mb-8">Luca Wiegand — Wega Studios</p>
 
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center shrink-0">
-                <i className="fas fa-user text-primary"></i>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider">Name</p>
-                <p className="text-white font-medium">Luca Wiegand</p>
-              </div>
+          {/* Kontaktformular */}
+          <form onSubmit={handleSubmit} className="space-y-4 mb-10">
+            <div>
+              <label htmlFor="email" className="block text-sm text-muted mb-1.5">Deine E-Mail</label>
+              <input
+                id="email"
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="name@beispiel.de"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all text-sm"
+              />
             </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center shrink-0">
-                <i className="fas fa-building text-primary"></i>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider">Unternehmen</p>
-                <p className="text-white font-medium">Wega Studios</p>
-              </div>
+            <div>
+              <label htmlFor="message" className="block text-sm text-muted mb-1.5">Nachricht</label>
+              <textarea
+                id="message"
+                required
+                rows={5}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Schreib mir eine Nachricht..."
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all text-sm resize-none"
+              />
             </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center shrink-0">
-                <i className="fas fa-briefcase text-primary"></i>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider">Rolle</p>
-                <p className="text-white font-medium">Software Developer</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center shrink-0">
-                <i className="fas fa-envelope text-primary"></i>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider">E-Mail</p>
-                <a href="mailto:wegastudios@outlook.de" className="text-white font-medium hover:text-primary transition-colors">
-                  wegastudios@outlook.de
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center shrink-0">
-                <i className="fas fa-globe text-primary"></i>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-wider">Webseite</p>
-                <a href="http://luca-wiegand.com/" target="_blank" rel="noreferrer" className="text-white font-medium hover:text-primary transition-colors">
-                  luca-wiegand.com
-                </a>
-              </div>
-            </div>
-          </div>
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="inline-flex items-center gap-2 bg-primary hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium px-6 py-3 rounded-lg transition-all text-sm"
+            >
+              <i className={`fas ${status === 'sending' ? 'fa-spinner fa-spin' : 'fa-paper-plane'} text-sm`}></i>
+              <span>{status === 'sending' ? 'Wird gesendet...' : 'Nachricht senden'}</span>
+            </button>
+            {status === 'success' && (
+              <p className="text-emerald-400 text-sm flex items-center gap-2">
+                <i className="fas fa-check-circle"></i> Nachricht erfolgreich gesendet!
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-400 text-sm flex items-center gap-2">
+                <i className="fas fa-exclamation-circle"></i> Etwas ist schiefgelaufen. Versuche es erneut.
+              </p>
+            )}
+          </form>
 
           {/* Profile Links */}
-          <div className="mt-10 mb-10">
+          <div className="mb-10">
             <h3 className="text-lg font-bold mb-4">Profile</h3>
             <div className="flex flex-wrap gap-3">
               <a href="https://github.com/Lucxar" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 hover:bg-white/10 px-5 py-2.5 rounded-lg border border-white/10 transition-all text-sm">

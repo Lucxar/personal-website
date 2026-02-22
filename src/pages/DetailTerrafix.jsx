@@ -33,25 +33,26 @@ export default function DetailTerrafix() {
               Das Konzept hat die Jury überzeugt: Am Ende konnten wir uns gegen alle anderen Teams durchsetzen und den ersten Platz erringen. Eine intensive Erfahrung, die gezeigt hat, wie viel in kürzester Zeit entstehen kann, wenn Teamwork, Kreativität und technisches Know-how zusammenkommen.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-              <div className="bg-white/5 p-6 rounded-lg border border-white/5">
-                <h4 className="font-bold text-white mb-2">Tech Stack</h4>
-                <ul className="text-muted text-sm space-y-1">
-                  <li>Unreal Engine 5</li>
-                  <li>Blueprints & C++</li>
-                  <li>Git Collaboration</li>
-                </ul>
-              </div>
-              <a href="https://maystudios.itch.io/terrafix" target="_blank" rel="noreferrer" className="bg-primary/15 hover:bg-primary/25 border border-primary/30 hover:border-primary/50 p-6 rounded-lg flex flex-col justify-center items-center text-center transition-all group">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <i className="fas fa-play text-primary text-lg"></i>
-                </div>
-                <h4 className="font-bold text-white mb-1">Hier geht's zum Spiel</h4>
-                <span className="text-sm text-primary flex items-center gap-2">
-                  itch.io <i className="fas fa-arrow-right text-xs"></i>
+            <h2 className="text-xl font-semibold text-white mt-8 mb-4">Technologien</h2>
+            <div className="flex gap-2 flex-wrap mb-8">
+              {['Unreal Engine 5', 'Blueprints', 'C++', 'Git Collaboration'].map(tag => (
+                <span key={tag} className="px-2.5 py-1 bg-purple-500/10 border border-purple-500/25 rounded-full text-xs text-purple-300">
+                  {tag}
                 </span>
-              </a>
+              ))}
             </div>
+
+            <a href="https://maystudios.itch.io/terrafix" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-primary/15 hover:bg-primary/25 border border-primary/30 hover:border-primary/50 px-5 py-3 rounded-lg transition-all group">
+              <div className="w-9 h-9 bg-primary/20 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                <i className="fas fa-play text-primary text-sm"></i>
+              </div>
+              <div>
+                <h4 className="font-bold text-white text-sm">Hier geht's zum Spiel</h4>
+                <span className="text-xs text-primary flex items-center gap-1">
+                  itch.io <i className="fas fa-arrow-right text-[10px]"></i>
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

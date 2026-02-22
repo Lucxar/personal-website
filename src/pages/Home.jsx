@@ -167,6 +167,15 @@ export default function Home() {
             iconColor="text-purple-400"
           />
         </BentoCard>
+        <BentoCard className="group" delay={0.2} onClick={() => navigate('/detail/compiler')}>
+          <ProjectTile
+            title="Pascal-to-JVM Compiler"
+            subtitle="COMPILERBAU"
+            desc="Ein vollständiger Compiler, der Pascal-Quellcode in ausführbaren JVM-Bytecode übersetzt."
+            icon="fas fa-microchip"
+            iconColor="text-orange-400"
+          />
+        </BentoCard>
       </BentoGrid>
 
       {/* ===== Contact Section ===== */}
