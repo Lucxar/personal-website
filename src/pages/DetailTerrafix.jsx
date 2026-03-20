@@ -2,58 +2,55 @@ import BackButton from '../components/BackButton'
 
 export default function DetailTerrafix() {
   return (
-    <div className="min-h-screen pt-24 px-4 pb-20">
-      <div className="max-w-4xl mx-auto fade-in">
+    <div className="min-h-screen pt-28 px-6 pb-20">
+      <div className="max-w-3xl mx-auto fade-in">
         <BackButton />
-        <div className="glass-card p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-          <div className="flex items-center gap-4 mb-2">
-            <h1 className="text-3xl sm:text-4xl font-bold">Terrafix</h1>
-            <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/40 px-3 py-1 rounded-full text-sm font-bold">
-              <i className="fas fa-trophy mr-1"></i> 1. PLATZ HHU GAME JAM 2025
-            </span>
+
+        <div className="flex flex-wrap items-center gap-3 mb-3">
+          <span className="inline-flex items-center bg-amber-50 text-amber-700 border border-amber-200 px-3 py-1 rounded-full text-xs font-semibold">
+            <i className="fas fa-trophy mr-1.5"></i> 1. Platz HHU Game Jam 2025
+          </span>
+        </div>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 tracking-tight">Terrafix</h1>
+        <p className="text-text-secondary mb-8">Unreal Engine Project</p>
+
+        <div className="w-full h-px bg-border-light mb-10"></div>
+
+        {/* Siegerfoto */}
+        <div className="rounded-2xl overflow-hidden mb-10 group cursor-default">
+          <img
+            src="/SiegerfotoGameJam2025.jpeg"
+            alt="Siegerehrung HHU Game Jam 2025"
+            className="w-full h-64 sm:h-80 object-cover object-[40%_35%] transition-transform duration-500 ease-out group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div className="max-w-[70ch] space-y-6 text-text-secondary leading-relaxed">
+          <p>
+            Terrafix entstand im Rahmen des HHU Game Jam 2025 — innerhalb von nur 48 Stunden entwickelten wir als 3-köpfiges Team ein vollständiges Spiel mit der Unreal Engine. Die Idee: Ein Reverse-Factorio, in dem man die Welt nicht ausbeutet, sondern rettet. Der Spieler steuert einen Roboter, der eine verwüstete Erde Stück für Stück wieder belebt — Böden rekultivieren, Vegetation zurückbringen und Ökosysteme wiederherstellen.
+          </p>
+          <p>
+            Das Konzept hat die Jury überzeugt: Am Ende konnten wir uns gegen alle anderen Teams durchsetzen und den ersten Platz erringen. Eine intensive Erfahrung, die gezeigt hat, wie viel in kürzester Zeit entstehen kann, wenn Teamwork, Kreativität und technisches Know-how zusammenkommen.
+          </p>
+
+          <h3 className="text-lg font-semibold text-text mt-10 mb-4">Technologien</h3>
+          <div className="flex flex-wrap gap-2 mb-8">
+            {['Unreal Engine 5', 'Blueprints', 'C++', 'Git Collaboration'].map(tag => (
+              <span key={tag} className="skill-tag">{tag}</span>
+            ))}
           </div>
-          <p className="text-xl text-primary mb-8 font-mono">Unreal Engine Project</p>
 
-          {/* Siegerfoto */}
-          <div className="relative rounded-xl overflow-hidden mb-8 group/img cursor-pointer">
-            <img
-              src="/SiegerfotoGameJam2025.jpeg"
-              alt="Siegerehrung HHU Game Jam 2025"
-              className="w-full h-64 sm:h-80 object-cover object-[40%_35%] transition-transform duration-500 ease-out group-hover/img:scale-110"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent transition-opacity duration-500 group-hover/img:opacity-60" />
-          </div>
-
-          <div className="prose prose-invert max-w-none">
-            <p className="text-muted leading-relaxed mb-6">
-              Terrafix entstand im Rahmen des HHU Game Jam 2025 — innerhalb von nur 48 Stunden entwickelten wir als 3-köpfiges Team ein vollständiges Spiel mit der Unreal Engine. Die Idee: Ein Reverse-Factorio, in dem man die Welt nicht ausbeutet, sondern rettet. Der Spieler steuert einen Roboter, der eine verwüstete Erde Stück für Stück wieder belebt — Böden rekultivieren, Vegetation zurückbringen und Ökosysteme wiederherstellen.
-            </p>
-            <p className="text-muted leading-relaxed mb-6">
-              Das Konzept hat die Jury überzeugt: Am Ende konnten wir uns gegen alle anderen Teams durchsetzen und den ersten Platz erringen. Eine intensive Erfahrung, die gezeigt hat, wie viel in kürzester Zeit entstehen kann, wenn Teamwork, Kreativität und technisches Know-how zusammenkommen.
-            </p>
-
-            <h2 className="text-xl font-semibold text-white mt-8 mb-4">Technologien</h2>
-            <div className="flex gap-2 flex-wrap mb-8">
-              {['Unreal Engine 5', 'Blueprints', 'C++', 'Git Collaboration'].map(tag => (
-                <span key={tag} className="px-2.5 py-1 bg-purple-500/10 border border-purple-500/25 rounded-full text-xs text-purple-300">
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <a href="https://maystudios.itch.io/terrafix" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-primary/15 hover:bg-primary/25 border border-primary/30 hover:border-primary/50 px-5 py-3 rounded-lg transition-all group">
-              <div className="w-9 h-9 bg-primary/20 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                <i className="fas fa-play text-primary text-sm"></i>
-              </div>
-              <div>
-                <h4 className="font-bold text-white text-sm">Hier geht's zum Spiel</h4>
-                <span className="text-xs text-primary flex items-center gap-1">
-                  itch.io <i className="fas fa-arrow-right text-[10px]"></i>
-                </span>
-              </div>
-            </a>
-          </div>
+          <a
+            href="https://maystudios.itch.io/terrafix"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary inline-flex"
+          >
+            <i className="fas fa-play text-xs"></i>
+            Hier geht's zum Spiel
+          </a>
         </div>
       </div>
     </div>

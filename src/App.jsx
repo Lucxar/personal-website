@@ -1,6 +1,5 @@
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import AnimatedBackground from './components/AnimatedBackground'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import DetailLiketik from './pages/DetailLiketik'
@@ -27,7 +26,6 @@ function AppContent() {
   return (
     <>
       <ScrollToTop />
-      {!isVisitenkarte && <AnimatedBackground />}
       {!isVisitenkarte && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />

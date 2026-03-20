@@ -1,10 +1,17 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
   const navigate = useNavigate()
   const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const scrollToSection = (id) => {
     setMenuOpen(false)
@@ -21,37 +28,50 @@ export default function Navbar() {
   }
 
   const links = [
-    { label: 'Skills', id: 'skills' },
-    { label: 'Erfahrung', id: 'experience' },
+    { label: 'Über mich', id: 'about' },
+    { label: 'Expertise', id: 'skills' },
     { label: 'Projekte', id: 'projects' },
   ]
 
   return (
-    <nav className="fixed w-full z-50 bg-dark/70 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-surface/90 backdrop-blur-xl shadow-sm border-b border-border-light'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16">
           <button
-            className="flex-shrink-0 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/30 px-4 py-1.5 rounded-lg transition-all"
+            className="text-text font-semibold text-lg tracking-tight hover:text-accent transition-colors duration-200"
             onClick={() => { navigate('/'); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
           >
-            <span className="text-xl font-bold tracking-wider">LUCA WIEGAND</span>
+            Luca Wiegand
           </button>
 
           {/* Desktop */}
-          <div className="hidden md:flex items-baseline space-x-4">
+          <div className="hidden md:flex items-center gap-1">
             {links.map(l => (
-              <button key={l.id} onClick={() => scrollToSection(l.id)} className="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <button
+                key={l.id}
+                onClick={() => scrollToSection(l.id)}
+                className="text-text-secondary hover:text-text px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+              >
                 {l.label}
               </button>
             ))}
-            <button onClick={() => { navigate('/kontakt'); setMenuOpen(false) }} className="bg-primary hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+            <button
+              onClick={() => { navigate('/kontakt'); setMenuOpen(false) }}
+              className="ml-2 btn-primary !py-2 !px-5 !text-sm"
+            >
               Kontakt
             </button>
           </div>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-white hover:text-primary transition-colors"
+            className="md:hidden p-2 text-text-secondary hover:text-text transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menü"
           >
@@ -61,18 +81,29 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-dark/95 backdrop-blur-xl border-t border-white/10 px-4 pb-4">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
+          menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="bg-surface/95 backdrop-blur-xl border-t border-border-light px-6 pb-4 pt-2">
           {links.map(l => (
-            <button key={l.id} onClick={() => scrollToSection(l.id)} className="block w-full text-left hover:text-primary px-3 py-3 text-sm font-medium transition-colors border-b border-white/5">
+            <button
+              key={l.id}
+              onClick={() => scrollToSection(l.id)}
+              className="block w-full text-left text-text-secondary hover:text-text px-2 py-3 text-sm font-medium transition-colors border-b border-border-light last:border-0"
+            >
               {l.label}
             </button>
           ))}
-          <button onClick={() => { navigate('/kontakt'); setMenuOpen(false) }} className="block w-full text-left text-primary px-3 py-3 text-sm font-medium">
+          <button
+            onClick={() => { navigate('/kontakt'); setMenuOpen(false) }}
+            className="block w-full text-left text-accent font-medium px-2 py-3 text-sm"
+          >
             Kontakt
           </button>
         </div>
-      )}
+      </div>
     </nav>
   )
 }
