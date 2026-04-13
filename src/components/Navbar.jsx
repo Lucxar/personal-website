@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16">
           <button
-            className="text-text font-semibold text-lg tracking-tight hover:text-accent transition-colors duration-200"
+            className="font-heading text-text font-bold text-lg tracking-tight hover:text-accent transition-colors duration-200"
             onClick={() => { navigate('/'); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
           >
             Luca Wiegand
@@ -56,7 +56,7 @@ export default function Navbar() {
               <button
                 key={l.id}
                 onClick={() => scrollToSection(l.id)}
-                className="text-text-secondary hover:text-text px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+                className="nav-link text-text-secondary hover:text-text px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
               >
                 {l.label}
               </button>

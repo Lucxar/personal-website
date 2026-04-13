@@ -26,32 +26,52 @@ export default function Home() {
 
   return (
     <main>
-      {/* ===== HERO ===== */}
-      <section className="min-h-[90vh] flex items-center justify-center pt-16">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center fade-in">
-          <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden mx-auto mb-8 shadow-xl ring-4 ring-border-light">
-            <img
-              src="/profilbild1zu1.png"
-              alt="Luca Wiegand"
-              className="w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
-            />
+      {/* ===== HERO (Split Layout) ===== */}
+      <section className="min-h-[92vh] flex items-center pt-20 pb-12">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 w-full fade-in">
+          <div className="grid md:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
+            {/* Left: Text content */}
+            <div>
+              <p className="text-accent font-medium text-sm tracking-widest uppercase mb-5">Software Developer</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] mb-6">
+                Luca Wiegand
+              </h1>
+              <p className="text-text-secondary text-lg lg:text-xl max-w-xl leading-relaxed mb-10">
+                Ich entwickle durchdachte Software — von skalierbaren Backend-Systemen bis hin zu interaktiven Webanwendungen und Spielen.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button onClick={() => scrollTo('projects')} className="btn-primary">
+                  Projekte entdecken
+                </button>
+                <button onClick={() => navigate('/kontakt')} className="btn-secondary">
+                  Kontaktieren
+                </button>
+              </div>
+            </div>
+            {/* Right: Profile image */}
+            <div className="hidden md:block">
+              <div className="w-52 h-52 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl ring-1 ring-border-light/60">
+                <img
+                  src="/profilbild1zu1.png"
+                  alt="Luca Wiegand"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
           </div>
-          <p className="text-accent font-medium text-sm tracking-wide uppercase mb-4">Software Developer</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
-            Luca Wiegand
-          </h1>
-          <p className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-            Ich entwickle durchdachte Software — von skalierbaren Backend-Systemen bis hin zu interaktiven Webanwendungen und Spielen.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => scrollTo('projects')} className="btn-primary">
-              Projekte entdecken
-            </button>
-            <button onClick={() => navigate('/kontakt')} className="btn-secondary">
-              Kontaktieren
-            </button>
+          {/* Mobile: Profile image below text */}
+          <div className="md:hidden flex justify-start mt-12">
+            <div className="w-36 h-36 rounded-2xl overflow-hidden shadow-xl ring-1 ring-border-light/60">
+              <img
+                src="/profilbild1zu1.png"
+                alt="Luca Wiegand"
+                className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -108,21 +128,21 @@ export default function Home() {
 
       {/* ===== BERUFSERFAHRUNG ===== */}
       <Section id="experience" className="bg-surface-alt">
-        <SectionHeading label="Erfahrung">Wo ich arbeite</SectionHeading>
+        <SectionHeading label="Berufserfahrung">Berufliche Stationen</SectionHeading>
         <div className="grid md:grid-cols-2 gap-6">
           <RevealDiv>
             <div
-              className="premium-card p-8 cursor-pointer group"
+              className="premium-card p-8 cursor-pointer group border-l-[3px] border-l-accent"
               onClick={() => navigate('/detail/liketik')}
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-semibold tracking-wider text-accent uppercase">Startup</span>
+                <span className="text-xs font-semibold tracking-wider text-accent uppercase">Startup · ca. 1 Jahr</span>
                 <i className="fas fa-arrow-right text-border group-hover:text-accent transition-colors duration-200"></i>
               </div>
               <h3 className="text-xl font-bold mb-1">LikeTik</h3>
               <p className="text-text-secondary text-sm mb-3">Backend Developer</p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Aktive Mitentwicklung einer skalierbaren E-Commerce-Plattform von der allerersten Zeile Code an.
+                Mitentwicklung einer skalierbaren E-Commerce-Plattform von der allerersten Zeile Code an — von Architektur bis Produktion.
               </p>
             </div>
           </RevealDiv>
@@ -132,7 +152,7 @@ export default function Home() {
               onClick={() => navigate('/detail/wega')}
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-semibold tracking-wider text-accent uppercase">Founder</span>
+                <span className="text-xs font-semibold tracking-wider text-accent uppercase">Founder · aktiv</span>
                 <i className="fas fa-arrow-right text-border group-hover:text-accent transition-colors duration-200"></i>
               </div>
               <h3 className="text-xl font-bold mb-1">Wega Studios</h3>
@@ -179,6 +199,30 @@ export default function Home() {
         </RevealDiv>
       </Section>
 
+      {/* ===== BREATHING ELEMENT — Stats ===== */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          <RevealDiv>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-20 text-center">
+              <div>
+                <p className="font-heading text-4xl md:text-5xl font-bold text-text tracking-tight">6+</p>
+                <p className="text-text-secondary text-sm mt-2">Technologie-Bereiche</p>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border-light"></div>
+              <div>
+                <p className="font-heading text-4xl md:text-5xl font-bold text-text tracking-tight">30+</p>
+                <p className="text-text-secondary text-sm mt-2">Tools & Frameworks</p>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border-light"></div>
+              <div>
+                <p className="font-heading text-4xl md:text-5xl font-bold text-accent tracking-tight">1.</p>
+                <p className="text-text-secondary text-sm mt-2">Platz HHU Game Jam</p>
+              </div>
+            </div>
+          </RevealDiv>
+        </div>
+      </section>
+
       {/* ===== TECHNISCHE EXPERTISE ===== */}
       <Section id="skills">
         <SectionHeading label="Expertise">Was ich kann</SectionHeading>
@@ -207,7 +251,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold mb-4">Web & Fullstack</h3>
               <div className="flex flex-wrap gap-2">
-                {['NestJS (Node.js)', 'HTML5', 'CSS3', 'REST APIs'].map(s => (
+                {['React', 'NestJS (Node.js)', 'HTML5', 'CSS3', 'REST APIs'].map(s => (
                   <span key={s} className="skill-tag">{s}</span>
                 ))}
               </div>
@@ -290,7 +334,7 @@ export default function Home() {
         {/* Terrafix — Featured */}
         <RevealDiv>
           <div
-            className="premium-card overflow-hidden cursor-pointer group mb-8"
+            className="premium-card overflow-hidden cursor-pointer group mb-8 border-t-[3px] border-t-accent"
             onClick={() => navigate('/detail/terrafix')}
           >
             <div className="relative h-56 sm:h-72 overflow-hidden">
@@ -316,6 +360,33 @@ export default function Home() {
               <p className="text-text-secondary text-sm mb-4">Unreal Engine Projekt — 48h Game Jam</p>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Ein Spiel entwickelt mit der Unreal Engine in einem 3-köpfigen Team. Reverse-Factorio-Konzept: Die Welt retten statt ausbeuten.
+              </p>
+            </div>
+          </div>
+        </RevealDiv>
+
+        {/* Disk Inserted — Game Jam */}
+        <RevealDiv>
+          <div
+            className="premium-card overflow-hidden cursor-pointer group mb-8 border-l-[3px] border-l-accent"
+            onClick={() => navigate('/detail/disk-inserted')}
+          >
+            <div className="p-8">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <span className="inline-flex items-center bg-surface-alt px-3 py-1.5 rounded-full text-xs font-semibold">
+                  <i className="fas fa-gamepad text-accent mr-1.5"></i> HHU Game Jam 2026
+                </span>
+                <span className="inline-flex items-center bg-surface-alt px-3 py-1.5 rounded-full text-xs font-semibold text-text-secondary">
+                  <i className="fas fa-clock mr-1.5"></i> 56 Stunden
+                </span>
+              </div>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold">Disk Inserted</h3>
+                <i className="fas fa-arrow-right text-border group-hover:text-accent transition-colors duration-200"></i>
+              </div>
+              <p className="text-text-secondary text-sm mb-4">Unreal Engine Projekt — 56h Game Jam</p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Ein First-Person Psychological-Horror-Spiel, entwickelt in 56 Stunden mit dem gleichen Team wie Terrafix. Eine alte Diskette verwandelt einen gewöhnlichen Tag in etwas Verstörendes.
               </p>
             </div>
           </div>
@@ -358,54 +429,59 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ===== KONTAKT / CTA ===== */}
-      <Section id="contact">
-        <div className="text-center max-w-2xl mx-auto">
-          <SectionHeading label="Kontakt" className="text-center [&_p]:mx-auto [&_h2]:mx-auto">
-            Lass uns zusammenarbeiten
-          </SectionHeading>
-          <p className="text-text-secondary leading-relaxed mb-10 -mt-8">
-            Sie haben ein Projekt im Kopf oder brauchen Unterstützung bei der Entwicklung? Ich freue mich über eine Anfrage.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button onClick={() => navigate('/kontakt')} className="btn-primary">
-              <i className="fas fa-envelope text-sm"></i>
-              Nachricht schreiben
-            </button>
-            <a
-              href="/luca_wiegand_public.vcf"
-              download="Luca_Wiegand_Kontakt.vcf"
-              className="btn-secondary"
-            >
-              <i className="fas fa-address-card text-sm"></i>
-              Kontakt speichern
-            </a>
-          </div>
-          <div className="flex items-center justify-center gap-5">
-            <a href="https://github.com/Lucxar" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary hover:text-text hover:bg-border-light transition-all duration-200" aria-label="GitHub">
-              <i className="fab fa-github text-lg"></i>
-            </a>
-            <a href="https://codeforces.com/profile/lucxar" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary hover:text-text hover:bg-border-light transition-all duration-200" aria-label="Codeforces">
-              <i className="fas fa-code text-lg"></i>
-            </a>
-            <a href="https://linkedin.com/in/luca-wiegand-385359279/" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary hover:text-text hover:bg-border-light transition-all duration-200" aria-label="LinkedIn">
-              <i className="fab fa-linkedin text-lg"></i>
-            </a>
-          </div>
+      {/* ===== KONTAKT / CTA (Dark Section) ===== */}
+      <section id="contact" className="bg-dark-bg py-24 md:py-32">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          <RevealDiv>
+            <div className="text-center max-w-2xl mx-auto">
+              <p className="text-accent font-medium text-sm tracking-widest uppercase mb-4">Kontakt</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-dark-text mb-6">
+                Lass uns zusammenarbeiten
+              </h2>
+              <p className="text-dark-text-secondary leading-relaxed mb-10">
+                Sie haben ein Projekt im Kopf oder brauchen Unterstützung bei der Entwicklung? Ich freue mich über eine Anfrage.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+                <button onClick={() => navigate('/kontakt')} className="btn-primary">
+                  <i className="fas fa-envelope text-sm"></i>
+                  Nachricht schreiben
+                </button>
+                <a
+                  href="/luca_wiegand_public.vcf"
+                  download="Luca_Wiegand_Kontakt.vcf"
+                  className="inline-flex items-center gap-2 font-medium px-7 py-3 rounded-full text-[0.9375rem] border-[1.5px] border-dark-text-secondary/30 text-dark-text-secondary hover:text-dark-text hover:border-dark-text/40 transition-all duration-200"
+                >
+                  <i className="fas fa-address-card text-sm"></i>
+                  Kontakt speichern
+                </a>
+              </div>
+              <div className="flex items-center justify-center gap-5">
+                <a href="https://github.com/Lucxar" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-dark-surface flex items-center justify-center text-dark-text-secondary hover:text-dark-text transition-all duration-200" aria-label="GitHub">
+                  <i className="fab fa-github text-lg"></i>
+                </a>
+                <a href="https://codeforces.com/profile/lucxar" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-dark-surface flex items-center justify-center text-dark-text-secondary hover:text-dark-text transition-all duration-200" aria-label="Codeforces">
+                  <i className="fas fa-code text-lg"></i>
+                </a>
+                <a href="https://linkedin.com/in/luca-wiegand-385359279/" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-dark-surface flex items-center justify-center text-dark-text-secondary hover:text-dark-text transition-all duration-200" aria-label="LinkedIn">
+                  <i className="fab fa-linkedin text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </RevealDiv>
         </div>
-      </Section>
+      </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="border-t border-border-light py-10">
+      <footer className="bg-dark-bg border-t border-white/5 py-10">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-text-secondary text-sm">
-              &copy; 2025 Luca Wiegand / Wega Studios. Alle Rechte vorbehalten.
+            <p className="text-dark-text-secondary text-sm">
+              &copy; 2026 Luca Wiegand / Wega Studios. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-5">
-              <a href="https://github.com/Lucxar" target="_blank" rel="noreferrer" className="text-text-secondary hover:text-text text-sm transition-colors" aria-label="GitHub">GitHub</a>
-              <a href="https://linkedin.com/in/luca-wiegand-385359279/" target="_blank" rel="noreferrer" className="text-text-secondary hover:text-text text-sm transition-colors" aria-label="LinkedIn">LinkedIn</a>
-              <a href="https://codeforces.com/profile/lucxar" target="_blank" rel="noreferrer" className="text-text-secondary hover:text-text text-sm transition-colors" aria-label="Codeforces">Codeforces</a>
+              <a href="https://github.com/Lucxar" target="_blank" rel="noreferrer" className="text-dark-text-secondary hover:text-dark-text text-sm transition-colors" aria-label="GitHub">GitHub</a>
+              <a href="https://linkedin.com/in/luca-wiegand-385359279/" target="_blank" rel="noreferrer" className="text-dark-text-secondary hover:text-dark-text text-sm transition-colors" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://codeforces.com/profile/lucxar" target="_blank" rel="noreferrer" className="text-dark-text-secondary hover:text-dark-text text-sm transition-colors" aria-label="Codeforces">Codeforces</a>
             </div>
           </div>
         </div>

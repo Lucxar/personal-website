@@ -4,17 +4,24 @@
 @theme {
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
 
-  /* Colors — Premium Light */
-  --color-bg: #FAFAFA;
+  /* Colors — Warm Premium Light (stone-tinted neutrals) */
+  --color-bg: #FAF9F7;
   --color-surface: #FFFFFF;
-  --color-surface-alt: #F5F5F7;
-  --color-text: #1D1D1F;
-  --color-text-secondary: #6E6E73;
+  --color-surface-alt: #F5F4F1;
+  --color-text: #1C1B19;
+  --color-text-secondary: #6E6D68;
   --color-accent: #0071E3;
   --color-accent-hover: #0077ED;
-  --color-border: #D2D2D7;
-  --color-border-light: #E8E8ED;
+  --color-border: #D4D2CD;
+  --color-border-light: #E9E7E3;
+
+  /* Dark surface tokens (for CTA section) */
+  --color-dark-bg: #1A1918;
+  --color-dark-surface: #242320;
+  --color-dark-text: #EDECE8;
+  --color-dark-text-secondary: #9E9D98;
 
   /* Spacing (8px grid) */
   --space-1: 0.25rem;
@@ -62,8 +69,14 @@ body {
 
 /* Headings */
 h1, h2, h3, h4 {
+  font-family: var(--font-heading);
   color: var(--color-text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+}
+
+/* Body text: lighter weight for dramatic contrast with bold headings */
+body {
+  font-weight: 400;
 }
 
 /* ========== Custom Scrollbar ========== */
@@ -206,4 +219,24 @@ h1, h2, h3, h4 {
   height: 3px;
   background: var(--color-accent);
   border-radius: var(--radius-full);
+}
+
+/* ========== Nav Link Underline Animation ========== */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 16px;
+  right: 16px;
+  height: 1.5px;
+  background: var(--color-accent);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
 }

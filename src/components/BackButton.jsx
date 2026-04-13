@@ -6,9 +6,9 @@ export default function BackButton() {
   return (
     <button
       onClick={() => navigate('/')}
-      className="mb-10 inline-flex items-center gap-2 text-text-secondary hover:text-accent text-sm font-medium transition-colors duration-200"
+      className="mb-10 group inline-flex items-center gap-2.5 text-text-secondary hover:text-accent text-sm font-medium transition-colors duration-200"
     >
-      <i className="fas fa-arrow-left text-xs"></i>
+      <i className="fas fa-arrow-left text-xs transition-transform duration-200 group-hover:-translate-x-1"></i>
       Zurück zur Übersicht
     </button>
   )

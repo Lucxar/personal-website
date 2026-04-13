@@ -6,6 +6,7 @@ import DetailLiketik from './pages/DetailLiketik'
 import DetailWega from './pages/DetailWega'
 import DetailSentrix from './pages/DetailSentrix'
 import DetailTerrafix from './pages/DetailTerrafix'
+import DetailDiskInserted from './pages/DetailDiskInserted'
 import DetailInternship from './pages/DetailInternship'
 import DetailCompiler from './pages/DetailCompiler'
 import DetailKontakt from './pages/DetailKontakt'
@@ -33,6 +34,7 @@ function AppContent() {
         <Route path="/detail/wega" element={<DetailWega />} />
         <Route path="/detail/sentrix" element={<DetailSentrix />} />
         <Route path="/detail/terrafix" element={<DetailTerrafix />} />
+        <Route path="/detail/disk-inserted" element={<DetailDiskInserted />} />
         <Route path="/detail/internship" element={<DetailInternship />} />
         <Route path="/detail/compiler" element={<DetailCompiler />} />
         <Route path="/kontakt" element={<DetailKontakt />} />
