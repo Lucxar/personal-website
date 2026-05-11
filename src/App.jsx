@@ -9,6 +9,7 @@ import DetailTerrafix from './pages/DetailTerrafix'
 import DetailDiskInserted from './pages/DetailDiskInserted'
 import DetailInternship from './pages/DetailInternship'
 import DetailCompiler from './pages/DetailCompiler'
+import DetailSunday from './pages/DetailSunday'
 import DetailKontakt from './pages/DetailKontakt'
 import Visitenkarte from './pages/Visitenkarte'
 
@@ -37,6 +38,7 @@ function AppContent() {
         <Route path="/detail/disk-inserted" element={<DetailDiskInserted />} />
         <Route path="/detail/internship" element={<DetailInternship />} />
         <Route path="/detail/compiler" element={<DetailCompiler />} />
+        <Route path="/detail/sunday" element={<DetailSunday />} />
         <Route path="/kontakt" element={<DetailKontakt />} />
         <Route path="/visitenkarte" element={<Visitenkarte />} />
       </Routes>

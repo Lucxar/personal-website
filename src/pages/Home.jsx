@@ -132,22 +132,6 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6">
           <RevealDiv>
             <div
-              className="premium-card p-8 cursor-pointer group border-l-[3px] border-l-accent"
-              onClick={() => navigate('/detail/liketik')}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-semibold tracking-wider text-accent uppercase">Startup · ca. 1 Jahr</span>
-                <i className="fas fa-arrow-right text-border group-hover:text-accent transition-colors duration-200"></i>
-              </div>
-              <h3 className="text-xl font-bold mb-1">LikeTik</h3>
-              <p className="text-text-secondary text-sm mb-3">Backend Developer</p>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Mitentwicklung einer skalierbaren E-Commerce-Plattform von der allerersten Zeile Code an — von Architektur bis Produktion.
-              </p>
-            </div>
-          </RevealDiv>
-          <RevealDiv delay={0.1}>
-            <div
               className="premium-card p-8 cursor-pointer group"
               onClick={() => navigate('/detail/wega')}
             >
@@ -159,6 +143,22 @@ export default function Home() {
               <p className="text-text-secondary text-sm mb-3">Inhaber & Entwickler</p>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Mein eigenes Gewerbe für Software-Dienstleistungen und individuelle Entwicklungsprojekte.
+              </p>
+            </div>
+          </RevealDiv>
+          <RevealDiv delay={0.1}>
+            <div
+              className="premium-card p-8 cursor-pointer group border-l-[3px] border-l-accent"
+              onClick={() => navigate('/detail/liketik')}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-semibold tracking-wider text-accent uppercase">Startup · ca. 1 Jahr</span>
+                <i className="fas fa-arrow-right text-border group-hover:text-accent transition-colors duration-200"></i>
+              </div>
+              <h3 className="text-xl font-bold mb-1">LikeTik</h3>
+              <p className="text-text-secondary text-sm mb-3">Backend Developer</p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Mitentwicklung einer skalierbaren E-Commerce-Plattform von der allerersten Zeile Code an — von Architektur bis Produktion.
               </p>
             </div>
           </RevealDiv>
@@ -387,6 +387,33 @@ export default function Home() {
               <p className="text-text-secondary text-sm mb-4">Unreal Engine Projekt — 56h Game Jam</p>
               <p className="text-text-secondary text-sm leading-relaxed">
                 Ein First-Person Psychological-Horror-Spiel, entwickelt in 56 Stunden mit dem gleichen Team wie Terrafix. Eine alte Diskette verwandelt einen gewöhnlichen Tag in etwas Verstörendes.
+              </p>
+            </div>
+          </div>
+        </RevealDiv>
+
+        {/* Sunday — Personal AI Assistant */}
+        <RevealDiv>
+          <div
+            className="premium-card overflow-hidden cursor-pointer group mb-8 border-l-[3px] border-l-accent"
+            onClick={() => navigate('/detail/sunday')}
+          >
+            <div className="p-8">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <span className="inline-flex items-center bg-surface-alt px-3 py-1.5 rounded-full text-xs font-semibold">
+                  <i className="fas fa-brain text-accent mr-1.5"></i> Personal AI Assistant
+                </span>
+                <span className="inline-flex items-center bg-surface-alt px-3 py-1.5 rounded-full text-xs font-semibold text-text-secondary">
+                  <i className="fab fa-github mr-1.5"></i> Open Source
+                </span>
+              </div>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold">Sunday</h3>
+                <i className="fas fa-arrow-right text-border group-hover:text-accent transition-colors duration-200"></i>
+              </div>
+              <p className="text-text-secondary text-sm mb-4">AI-gestütztes Wissensmanagement</p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Notizen-Apps verlieren sie, Chatbots vergessen alles — Sunday dreht das Spiel um. Ein KI-Agent pflegt automatisch eine wachsende Markdown-Wissensbasis, die mit jeder Notiz wertvoller wird. Lokal, Open Source, dein zweites Gehirn.
               </p>
             </div>
           </div>
