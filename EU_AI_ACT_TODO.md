@@ -33,7 +33,13 @@ Die beiden alten Portraitdateien wurden durch genau ein neues Asset `public/port
 - [x] Mobile, Desktop-, Visitenkarten- und Screenreader-Darstellung prüfen.
 - [x] Eine kurze KI-Content- und Freigaberegel im Repo dokumentieren: fachliche Prüfung, Rechte/Datenschutz, Deepfake-Prüfung, Kennzeichnung und verantwortliche Freigabe.
 - [x] Alte Dateinamen und weitere unmarkierte Portraitkopien per Repository-Suche ausschließen.
-- [ ] Produktionsbuild ausführen und alle Vorkommen nach Deployment auf `https://luca-wiegand.com/` einschließlich `#/visitenkarte` verifizieren.
+- [x] Produktionsbuild ausführen und alle Vorkommen nach Deployment auf `https://luca-wiegand.com/` einschließlich `#/visitenkarte` verifizieren.
+
+### Verifikation am 1. August 2026
+
+- `npm run build` erfolgreich.
+- [GitHub-Pages-Build und Deployment](https://github.com/Lucxar/personal-website/actions/runs/30704203105) erfolgreich.
+- Live im Desktop- und Mobile-Viewport geprüft: Hero-, Über-mich- und Visitenkarten-Portraits laden das neue 576×772-Asset; die Kennzeichnung liegt jeweils kontrastreich innerhalb des Bildes und verdeckt im runden Visitenkartenformat nicht das Gesicht.
 
 ## Nicht anwendbar nach aktuellem Funktionsumfang
 
