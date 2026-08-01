@@ -18,7 +18,7 @@ Alle Textinhalte und Daten der Webseite, strukturiert nach Seitenaufbau.
 
 ## Hero (oben, ohne Kachel)
 
-- Profilbild: `profilbild1zu1.png` (Quadrat, links)
+- Profilbild: `portrait-ai-modified.jpeg` (KI-bearbeitet, mit sichtbarer Kennzeichnung)
 - Überschrift-Tag: „Software Developer"
 - Name: „Luca Wiegand"
 - Absatz 1: „Ich mag es, Probleme zu verstehen und durch Code zu lösen — ob Backend-Systeme, Webanwendungen oder Spieleentwicklung. Am meisten reizt mich dabei, Ideen von Grund auf umzusetzen und dabei sauber und durchdacht zu arbeiten."
@@ -143,7 +143,7 @@ Alle Textinhalte und Daten der Webseite, strukturiert nach Seitenaufbau.
 ## Visitenkarte (`/visitenkarte`)
 
 - Standalone-Seite (kein Header/Navbar)
-- Profilbild: `profilbild1zu1.png`
+- Profilbild: `portrait-ai-modified.jpeg` (KI-bearbeitet, mit sichtbarer Kennzeichnung)
 - Name: Luca Wiegand
 - Rolle: Software Developer
 - Firma: Wega Studios

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Section from '../components/Section'
 import SectionHeading from '../components/SectionHeading'
+import Portrait from '../components/Portrait'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
 
 function RevealDiv({ children, className = '', delay = 0 }) {
@@ -50,28 +51,20 @@ export default function Home() {
             </div>
             {/* Right: Profile image */}
             <div className="hidden md:block">
-              <div className="w-52 h-52 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl ring-1 ring-border-light/60">
-                <img
-                  src="/profilbild1zu1.png"
-                  alt="Luca Wiegand"
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </div>
-            </div>
-          </div>
-          {/* Mobile: Profile image below text */}
-          <div className="md:hidden flex justify-start mt-12">
-            <div className="w-36 h-36 rounded-2xl overflow-hidden shadow-xl ring-1 ring-border-light/60">
-              <img
-                src="/profilbild1zu1.png"
-                alt="Luca Wiegand"
-                className="w-full h-full object-cover"
+              <Portrait
+                imageContainerClassName="w-52 h-52 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl ring-1 ring-border-light/60"
                 loading="eager"
                 fetchPriority="high"
               />
             </div>
+          </div>
+          {/* Mobile: Profile image below text */}
+          <div className="md:hidden flex justify-start mt-12">
+            <Portrait
+              imageContainerClassName="w-36 h-36 rounded-2xl overflow-hidden shadow-xl ring-1 ring-border-light/60"
+              loading="eager"
+              fetchPriority="high"
+            />
           </div>
         </div>
       </section>
@@ -80,15 +73,10 @@ export default function Home() {
       <Section id="about">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <RevealDiv>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="/profilbild16zu9.png"
-                alt="Luca Wiegand"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+            <Portrait
+              className="w-full"
+              imageContainerClassName="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-lg"
+            />
           </RevealDiv>
           <RevealDiv delay={0.1}>
             <SectionHeading label="Über mich">

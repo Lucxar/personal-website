@@ -98,7 +98,7 @@ src/
 
 - **Tag:** "Software Developer" (uppercase, primare Farbe)
 - **Name:** "Luca Wiegand" (bold, 4xl/5xl)
-- **Profilbild:** `/profilbild1zu1.png` (quadratisch, 48x48/56x56 w/h, rounded-2xl, border white/10)
+- **Profilbild:** `/portrait-ai-modified.jpeg` (KI-bearbeitet, mit sichtbarer HTML-Kennzeichnung)
 - **Text 1:** "Ich mag es, Probleme zu verstehen und durch Code zu losen — ob Backend-Systeme, Webanwendungen oder Spieleentwicklung. Am meisten reizt mich dabei, Ideen von Grund auf umzusetzen und dabei sauber und durchdacht zu arbeiten."
 - **Text 2:** "Ich will mich fachlich weiterentwickeln, neue Technologien lernen und langfristig mehr Verantwortung in Projekten und Teams ubernehmen."
 - **CTA 1:** "Projekte ansehen" → scrollt zu #projects (blauer Button)
@@ -324,8 +324,7 @@ src/
 
 | Datei | Pfad | Verwendung |
 |---|---|---|
-| Profilbild (quadratisch) | `/profilbild1zu1.png` | Hero, Visitenkarte |
-| Profilbild (16:9) | `/profilbild16zu9.png` | (aktuell ungenutzt) |
+| Profilbild | `/portrait-ai-modified.jpeg` | Hero, Über mich, Visitenkarte; jeweils mit sichtbarer KI-Kennzeichnung |
 | Siegerfoto Game Jam | `/SiegerfotoGameJam2025.jpeg` | Terrafix-Detail, GameJamPhotoTile |
 | VCF offentlich | `/luca_wiegand_public.vcf` | Kontakt-Download (ohne Telefon) |
 | VCF privat | `/visitenkarte/luca_wiegand.vcf` | Visitenkarte-Download (mit Telefon) |

@@ -99,6 +99,49 @@ body {
   animation: fadeIn 0.5s var(--ease-out-expo);
 }
 
+/* ========== AI-modified portrait disclosure ========== */
+.portrait-figure {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.portrait-figure--centered {
+  align-items: center;
+}
+.portrait-ai-disclosure {
+  position: absolute;
+  z-index: 1;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
+  max-width: calc(100% - 1rem);
+  padding: 0.2rem 0.5rem;
+  background: #1A1918;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.portrait-figure--centered .portrait-ai-disclosure {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.portrait-ai-disclosure--bottom {
+  top: auto;
+  bottom: 0.375rem;
+  min-height: 1.25rem;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.625rem;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }

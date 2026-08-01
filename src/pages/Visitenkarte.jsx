@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Portrait from '../components/Portrait'
 
 export default function Visitenkarte() {
   return (
@@ -7,11 +8,15 @@ export default function Visitenkarte() {
         <div className="h-20 bg-gradient-to-r from-accent to-blue-500"></div>
 
         <div className="px-6 pb-8 text-center relative">
-          <div className="w-28 h-28 mx-auto -mt-14 bg-surface rounded-full p-1.5 shadow-lg">
-            <div className="w-full h-full rounded-full overflow-hidden">
-              <img src="/profilbild1zu1.png" alt="Luca Wiegand" className="w-full h-full object-cover" />
-            </div>
-          </div>
+          <Portrait
+            className="w-32 mx-auto -mt-14"
+            imageContainerClassName="w-28 h-28 bg-surface rounded-full p-1.5 shadow-lg"
+            imageClassName="rounded-full"
+            disclosureClassName="portrait-ai-disclosure--bottom"
+            loading="eager"
+            fetchPriority="high"
+            centered
+          />
 
           <h1 className="text-2xl font-bold mt-5 text-text">Luca Wiegand</h1>
           <p className="text-accent font-medium text-sm tracking-wide uppercase mb-1">Software Developer</p>
