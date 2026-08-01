@@ -41,6 +41,15 @@ Die beiden alten Portraitdateien wurden durch genau ein neues Asset `public/port
 - [GitHub-Pages-Build und Deployment](https://github.com/Lucxar/personal-website/actions/runs/30704203105) erfolgreich.
 - Live im Desktop- und Mobile-Viewport geprüft: Hero-, Über-mich- und Visitenkarten-Portraits laden das neue 576×772-Asset; die Kennzeichnung liegt jeweils kontrastreich innerhalb des Bildes und verdeckt im runden Visitenkartenformat nicht das Gesicht.
 
+## TODO – Iteration 3: Transkript-Audit und Governance
+
+- [x] Vollständigen Medienaudit auf alle ausgelieferten fotorealistischen Bild- sowie Audio-/Video-Assets ausgeweitet. Das Ergebnis und die Hashes sind in `AI_CONTENT_REGISTER.md` dokumentiert; es gibt keine Audio-/Video-Assets.
+- [x] Das Portrait als KI-bearbeitet und das Siegerfoto ausschließlich anhand repo-interner Evidenz bewertet. Für das Siegerfoto besteht keine repo-interne Evidenz einer KI-Bearbeitung; daher keine Art.-50-Kennzeichnung und eine offene Provenienz-/Rechteprüfung im Register.
+- [x] Verhältnismäßige schriftliche KI-Kompetenzmaßnahme nach Art. 4 für professionelle GenAI-Nutzung in `AI_LITERACY_RECORD.md` festgelegt, einschließlich Verantwortlichkeit, Risiken, Beauftragten und Review-Triggern – ohne unbelegte Schulungs- oder Zertifikatsbehauptung.
+- [x] `AI_CONTENT_RELEASE_POLICY.md` um substantielle menschliche Textprüfung, redaktionelle Verantwortung, Bild-/Video-/Audio-Regeln für die erste Wahrnehmung, Auftragnehmerpflichten und Register-/Kompetenzverweise erweitert.
+- [x] Das vollständige WBS-Legal-Rohtranskript `tSIXQL0iMgk.transcript.md` ausgewertet: Rollen und berufliche Nutzung [04:41–05:46], Deepfakes/Standardretusche [05:49–09:58], Texte und menschliche Prüfung [09:55–11:12], Labelpraxis [12:15–14:19], Hochrisiko-Beispiel [14:20–14:54], Inventar und dokumentierte Abnahme [18:11–18:38].
+- [x] Gegen die amtliche Kommissions-FAQ zu KI-Kompetenz und die Art.-50-Leitlinien abgeglichen; keine neue UI-Kennzeichnung erforderlich.
+
 ## Nicht anwendbar nach aktuellem Funktionsumfang
 
 - [x] Kein KI-Chatbot oder interaktiver KI-Avatar auf der Website – daher derzeit kein Hinweis nach Art. 50 Abs. 1.
@@ -60,6 +69,7 @@ Die beiden alten Portraitdateien wurden durch genau ein neues Asset `public/port
 - [EU-Icons und Anforderungen an sichtbare/barrierefreie Kennzeichnungen](https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content)
 - [Freiwilliger Code of Practice zur Transparenz KI-generierter Inhalte](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)
 - [Bundesnetzagentur: KI-Kompetenz](https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/7_Kompetenz/artikel.html)
+- [Kommission: AI Literacy – Questions & Answers](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers)
 
 ## Wesentliche rechtliche Abgrenzungen
 
@@ -68,3 +78,5 @@ Die beiden alten Portraitdateien wurden durch genau ein neues Asset `public/port
 - Eine sichtbare Offenlegung muss klar, unterscheidbar, barrierefrei und bei der ersten Exposition wahrnehmbar sein. Metadaten, `alt`-Text, Tooltip, Impressum oder Footer allein genügen nicht.
 - Das freiwillige EU-Icon ist nicht vorgeschrieben. Ein kurzer Klartext-Hinweis ist für diese Portrait-Vorkommen verständlicher und verhältnismäßig.
 - Art. 50 verlangt keinen pauschalen Hinweis für KI-unterstützten Quellcode oder für menschlich geprüfte Website-Texte.
+- Das im Audit ausgewertete WBS-Legal-Video beschreibt eine Einbettung „im Bild“ beziehungsweise in einer Ecke als zwingend. Das überzeichnet die Vorgabe: Erforderlich ist eine klare, wahrnehmbare Offenlegung bei der ersten Wahrnehmung; weder eine bestimmte Ecke noch ein verpflichtend in Pixel eingebrannter Hinweis ist vorgegeben. Die bestehende Einbettung im Portrait ist eine vorsorgliche, strengere Umsetzung.
+- Die Aussage des Videos, es gebe bei Verstößen „keine Verwarnung“, wird nicht als eigenständige Rechtsaussage übernommen. Bußgeldrahmen und Durchsetzung richten sich nach dem Verordnungstext und den jeweils anwendbaren Durchsetzungsregeln; diese interne Dokumentation ersetzt keine Rechtsberatung.
