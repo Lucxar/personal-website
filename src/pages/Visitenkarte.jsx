@@ -26,7 +26,7 @@ export default function Visitenkarte() {
 
           <div className="flex flex-col gap-3">
             <a
-              href="/visitenkarte/luca_wiegand.vcf"
+              href="/visitenkarte/luca_wiegand-8f3a2c.vcf"
               download="Luca_Wiegand_Kontakt.vcf"
               className="w-full btn-primary justify-center !rounded-xl !py-3"
             >

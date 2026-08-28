@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FAF9F7">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Luca Wiegand | Visitenkarte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FAF9F7;
+            --color-surface: #FFFFFF;
+            --color-surface-alt: #F5F4F1;
+            --color-text: #1C1B19;
+            --color-text-secondary: #6E6D68;
+            --color-accent: #0071E3;
+            --color-accent-hover: #0077ED;
+            --color-border-light: #E9E7E3;
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.03);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.06), 0 4px 10px rgba(0,0,0,0.04);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.04);
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            font-weight: 400;
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 28rem;
+            background: var(--color-surface);
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            animation: fadeIn 0.5s var(--ease-out-expo);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card__banner {
+            height: 5rem;
+            background: linear-gradient(to right, var(--color-accent), #3B82F6);
+        }
+        .card__body {
+            padding: 0 1.5rem 2rem;
+            text-align: center;
+        }
+
+        /* AI-modified portrait disclosure — required by AI_CONTENT_REGISTER.md */
+        .portrait-figure {
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            width: 8rem;
+            margin: -3.5rem auto 0;
+        }
+        .portrait-figure__frame {
+            width: 7rem;
+            height: 7rem;
+            padding: 0.375rem;
+            background: var(--color-surface);
+            border-radius: 9999px;
+            box-shadow: var(--shadow-lg);
+        }
+        .portrait-figure__frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 28%;
+            border-radius: 9999px;
+        }
+        .portrait-ai-disclosure {
+            position: absolute;
+            z-index: 1;
+            bottom: 0.375rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-flex;
+            align-items: center;
+            min-height: 1.25rem;
+            max-width: calc(100% - 1rem);
+            margin: 0;
+            padding: 0.15rem 0.35rem;
+            background: #1A1918;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            border-radius: 4px;
+            font-size: 0.625rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .name {
+            margin: 1.25rem 0 0;
+            font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .role {
+            margin: 0 0 0.25rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            font-size: 0.875rem;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+        }
+        .org {
+            margin: 0;
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+        }
+        .divider {
+            width: 3rem;
+            height: 2px;
+            margin: 1.5rem auto;
+            background: var(--color-border-light);
+            border-radius: 9999px;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: transform 150ms var(--ease-out-quart),
+                        box-shadow 150ms var(--ease-out-quart),
+                        background 150ms var(--ease-out-quart);
+        }
+        .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        .btn:active { transform: translateY(0) scale(0.98); transition-duration: 100ms; }
+        .btn svg { flex: none; width: 1.125rem; height: 1.125rem; }
+
+        .btn--primary { background: var(--color-accent); color: #FFFFFF; }
+        .btn--primary:hover { background: var(--color-accent-hover); }
+        .btn--muted {
+            background: var(--color-surface-alt);
+            color: var(--color-text);
+            border: 1px solid var(--color-border-light);
+        }
+        .btn--muted:hover { background: var(--color-border-light); }
+        .btn--linkedin { background: #0077B5; color: #FFFFFF; }
+        .btn--linkedin:hover { background: #006097; }
+        .btn--github { background: var(--color-text); color: var(--color-surface); }
+        .btn--github:hover { background: #33322F; }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+        }
+        .footer a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 150ms var(--ease-out-quart);
+        }
+        .footer a:hover { color: var(--color-accent); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card { animation: none; }
+            .btn:hover, .btn:active { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="card__banner"></div>
+
+        <div class="card__body">
+            <figure class="portrait-figure">
+                <div class="portrait-figure__frame">
+                    <img src="/portrait-ai-modified.jpeg"
+                         alt="Portrait mit KI bearbeitet von Luca Wiegand"
+                         width="112" height="112" decoding="async">
+                </div>
+                <figcaption class="portrait-ai-disclosure">Mit KI bearbeitet</figcaption>
+            </figure>
+
+            <h1 class="name">Luca Wiegand</h1>
+            <p class="role">Software Developer</p>
+            <p class="org">Wega Studios</p>
+
+            <div class="divider"></div>
+
+            <div class="actions">
+                <a class="btn btn--primary"
+                   href="/visitenkarte/luca_wiegand-8f3a2c.vcf"
+                   download="Luca_Wiegand_Kontakt.vcf">
+                    <svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM208 128c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h4.8c12.5 6 26.3 9.6 41 9.6s28.6-3.6 41-9.6h4.8c37.1 0 67.2 25.8 67.2 57.6v19.2zM472 328H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8zm0-64H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8zm0-64H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8z"/></svg>
+                    <span>Kontakt speichern</span>
+                </a>
+
+                <a class="btn btn--muted" href="/">
+                    <svg viewBox="0 0 496 512" fill="currentColor" aria-hidden="true"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM504 256c0-21.9-2.8-43.2-8.1-63.5H381.2c2.1 20.9 3.3 42.4 3.3 63.5s-1.2 42.6-3.3 63.5h114.8c5.3-20.3 8-41.6 8-63.5zm-393.6 0c0-21.1 1.2-42.6 3.3-63.5H8.1C2.8 212.8 0 234.1 0 256s2.8 43.2 8.1 63.5H114c-2.1-20.9-3.3-42.4-3.3-63.5zm38.5 96c8.7 56.9 25.5 107.8 49.9 141.6-71.4-21.2-129.4-73.7-157.9-141.6h108zm159.5 0h-177c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152zm101.7 0c-8.8 56.9-25.6 107.8-50 141.6 71.5-21.2 129.4-73.7 158-141.6h-108z"/></svg>
+                    <span>Webseite öffnen</span>
+                </a>
+
+                <a class="btn btn--linkedin"
+                   href="https://linkedin.com/in/luca-wiegand-385359279/"
+                   target="_blank" rel="noreferrer">
+                    <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a class="btn btn--github"
+                   href="https://github.com/Lucxar"
+                   target="_blank" rel="noreferrer">
+                    <svg viewBox="0 0 496 512" fill="currentColor" aria-hidden="true"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+
+            <p class="footer"><a href="/">&copy; 2025 Wega Studios</a></p>
+        </div>
+    </main>
+</body>
+</html>
