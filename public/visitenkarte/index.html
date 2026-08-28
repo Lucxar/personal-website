@@ -93,45 +93,41 @@
             object-position: 50% 28%;
             border-radius: 9999px;
         }
-        /* Tuned to the legal minimum, not below it.
-           Art. 50(4) AI Act makes this disclosure mandatory (the portrait is a
-           confirmed deep fake under Art. 3(60)); Art. 50(5) requires it to be
-           clear, distinguishable and conformant with accessibility
-           requirements, which the Commission guidance ties to the 4.5:1 WCAG AA
-           contrast minimum.
+        /* Sits directly beneath the portrait, clamped to it, never overlapping
+           the photo. The EU guidance requires the label "am oder im Bild" — on
+           or AT the image — so an attached caption qualifies; what does not is
+           metadata only, a footer, an imprint, or anything needing a scroll or
+           a click. It stays inside the <figure> as the <figcaption>, which
+           keeps the association with the image explicit for assistive tech.
 
-           #676662 on the 92%-opaque white chip measures 5.75:1 on white and
-           4.82:1 in the worst case (a black pixel showing through the chip) —
-           a deliberate +0.32 margin over the 4.5:1 floor, because antialiasing
-           on 10px text eats into effective contrast.
+           Tuned to the legal minimum, not below it. Art. 50(4) AI Act makes
+           this disclosure mandatory (the portrait is a confirmed deep fake
+           under Art. 3(60)); Art. 50(5) requires it to be clear,
+           distinguishable and conformant with accessibility requirements,
+           which the Commission guidance ties to the 4.5:1 WCAG AA floor.
+
+           Sitting on the white card, the background is deterministic — there is
+           no photo behind it and therefore no worst case. #73726E on #FFFFFF
+           measures 4.82:1, a deliberate +0.32 margin, because antialiasing on
+           10px text eats into effective contrast.
 
            This is as faint as the label may legally get. Do NOT lighten the
-           colour, lower the chip opacity, or shrink the font size further:
-           each of those pushes a mandatory disclosure below the floor. */
+           colour or shrink the font size further, and do not move it away from
+           the image: each pushes a mandatory disclosure below the floor. */
         .portrait-ai-disclosure {
-            position: absolute;
-            z-index: 1;
-            bottom: 0.25rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: inline-flex;
-            align-items: center;
-            max-width: calc(100% - 0.5rem);
-            margin: 0;
-            padding: 0.08rem 0.25rem;
-            background: rgba(255, 255, 255, 0.92);
-            color: #676662;
-            border-radius: 3px;
+            display: block;
+            margin: 0.3rem 0 0;
+            padding: 0;
+            color: #73726E;
             font-size: 0.625rem;
             font-weight: 400;
             line-height: 1.2;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.02em;
             white-space: nowrap;
-            pointer-events: none;
         }
 
         .name {
-            margin: 1.25rem 0 0;
+            margin: 0.85rem 0 0;
             font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
