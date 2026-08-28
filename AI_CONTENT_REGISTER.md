@@ -1,6 +1,6 @@
 # Register ausgelieferter Medieninhalte
 
-Stand: 1. August 2026
+Stand: 28. August 2026
 
 Geltungsbereich: Alle von `luca-wiegand.com` ausgelieferten Bild-, Audio- und Video-Assets. Dieses Register dokumentiert nur die im Repository belegte Herkunft und Bewertung. Es ersetzt keine Rechte- oder Datenschutzprüfung vor einer Veröffentlichung.
 
@@ -9,13 +9,18 @@ Geltungsbereich: Alle von `luca-wiegand.com` ausgelieferten Bild-, Audio- und Vi
 ### `public/portrait-ai-modified.jpeg`
 
 - **SHA-256:** `2BF600BC9F49DF9F30D87C5EE0CCEA02483F8D90F3DF52FAA8325C6D3625B9D7`
-- **Status:** KI-bearbeitet; vorsorglich als potenziell unter Art. 50 fallender Deepfake behandelt.
-- **Auslieferung:** Vier Vorkommen über `src/components/Portrait.jsx`:
-  - Hero Desktop: `src/pages/Home.jsx`
-  - Hero Mobile: `src/pages/Home.jsx`
-  - „Über mich“: `src/pages/Home.jsx`
-  - Visitenkarte: `src/pages/Visitenkarte.jsx`
-- **Kennzeichnung:** Jede Darstellung enthält den sichtbaren HTML-Hinweis „Mit KI bearbeitet“ direkt im Bild. Der Alternativtext lautet „Portrait mit KI bearbeitet von Luca Wiegand“.
+- **Bearbeitungsumfang:** Generative Veränderung an Gesicht, Körper beziehungsweise Kleidung der abgebildeten Person. Das geht über eine unterstützende Standardbearbeitung (Belichtung, Farbe, Rauschminderung, Retusche) hinaus und liegt damit oberhalb der Erheblichkeitsschwelle.
+- **Status:** **Deepfake im Sinne von Art. 3 Nr. 60 KI-VO** — bestätigt, nicht mehr nur vorsorglich. Alle drei Merkmale sind erfüllt: KI-manipuliert, erhebliche Ähnlichkeit mit einer real existierenden Person, und die Darstellung würde als echt erscheinen. Die Kennzeichnungspflicht nach Art. 50 Abs. 4 KI-VO greift damit zwingend. Eine Entfernung der Kennzeichnung ist unzulässig, solange dieses Asset ausgeliefert wird.
+- **Auslieferung:** Fünf Vorkommen:
+  - Hero Desktop: `src/pages/Home.jsx` (über `src/components/Portrait.jsx`)
+  - Hero Mobile: `src/pages/Home.jsx` (über `src/components/Portrait.jsx`)
+  - „Über mich“: `src/pages/Home.jsx` (über `src/components/Portrait.jsx`)
+  - Visitenkarte (React-Route `/#/visitenkarte`): `src/pages/Visitenkarte.jsx` (über `src/components/Portrait.jsx`)
+  - Visitenkarte (statische Seite `/visitenkarte/`): `public/visitenkarte/index.html` — eigenständige Auszeichnung, nutzt `Portrait.jsx` nicht
+- **Kennzeichnung:** Jede Darstellung enthält einen sichtbaren HTML-Hinweis unmittelbar im Bild, wahrnehmbar bei der ersten Exposition ohne technische Hilfsmittel oder gesonderte Handlung. Der Alternativtext lautet überall „Portrait mit KI bearbeitet von Luca Wiegand“.
+  - Die vier `Portrait.jsx`-Vorkommen zeigen „Mit KI bearbeitet“.
+  - Die statische Visitenkarte zeigt „AI Modified“ in bewusst zurückhaltender Gestaltung.
+- **Kontrastnachweis statische Visitenkarte:** Text `#5C5B57` auf einem zu 92 % deckenden weißen Chip. Kontrast 6,80:1 auf weißem Grund; im ungünstigsten Fall — schwarzer Bildpunkt unter dem halbtransparenten Chip — noch 5,70:1. Beides liegt über dem Mindestwert von 4,5:1, auf den die EU-Leitlinie zu Art. 50 Abs. 5 KI-VO über die Barrierefreiheitsanforderungen verweist. **Kontrast und Schriftgröße dürfen nicht weiter abgesenkt werden.** Größe und Stil der Kennzeichnung dürfen nach der Leitlinie variieren, solange sie klar, zugänglich, lesbar und erkennbar bleibt; der Kontrastwert ist dagegen die harte Untergrenze.
 - **Freigabe:** Vor jeder erneuten Bearbeitung, Ersetzung oder zusätzlichen Nutzung sind Rechte/Datenschutz, Umfang der KI-Bearbeitung, Deepfake-Einstufung und Kennzeichnung nach `AI_CONTENT_RELEASE_POLICY.md` erneut zu prüfen.
 
 ### `public/SiegerfotoGameJam2025.jpeg`
